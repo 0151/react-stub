@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   output: {
@@ -16,11 +17,16 @@ module.exports = {
         test: /\.tsx?$/,
         use: "babel-loader",
       },
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+      },
     ],
   },
   plugins: [
     new HtmlWebPackPlugin({
       template: "./public/index.html",
     }),
+    new MiniCssExtractPlugin(),
   ],
 };
