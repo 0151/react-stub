@@ -8,10 +8,8 @@
 
 ## Установка
 
-git clone https://github.com/0151/react-stub.git //
-
 ```bash
---depth 1 my-react-project
+git clone https://github.com/0151/react-stub.git --depth 1 my-react-project
 cd my-react-project
 npm install
 ```
@@ -24,7 +22,7 @@ npm install
 npm run build
 ```
 
-#### Запуск окружения разработки
+### Запуск окружения разработки
 
 ```bash
 npm start
